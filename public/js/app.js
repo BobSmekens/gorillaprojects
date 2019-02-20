@@ -5,6 +5,9 @@ var myApp = angular.module('myApp', [
 		$routeProvider.when('/page1', {templateUrl: 'gorillaprojects/public/partials/page1.html', controller: 'page1Controller'});
 		$routeProvider.when('/projects', {templateUrl: 'gorillaprojects/public/partials/projects.html', controller: 'projectsController'});
 		$routeProvider.when('/register', {templateUrl: 'gorillaprojects/public/partials/register.html', controller: 'registerController'});
+		$routeProvider.when('/login', {templateUrl: 'gorillaprojects/public/partials/login.html', controller: 'loginController'});
+		$routeProvider.when('/me', {templateUrl: 'gorillaprojects/public/partials/me.html', controller: 'meController'});
+
 
 		$routeProvider.otherwise({redirectTo: '/gorillaprojects'});
 

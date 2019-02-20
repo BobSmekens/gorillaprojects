@@ -1,7 +1,8 @@
 // font-family: 'Oxygen', sans-serif;
 * {
     font-family: 'Oxygen', sans-serif;
-    color: blue;
+    color: #444;
+    outline: none;
 }
 
 body {
@@ -134,13 +135,14 @@ a {
     justify-content: center;
 
     .project-card {
-        min-width: 250px;
+        width: 250px;
         flex: 1;
         text-align: left;
         display: inline-block;
         vertical-align: top;
         box-sizing: border-box;
         height: 350px;
+        overflow: hidden;
         // background-color: teal;
         padding: 30px;
         margin: 20px;
@@ -155,12 +157,19 @@ a {
 
         .project-property {
             font-size: 18px;
+            max-width: 100%;
             // padding: 5px 0;
         }
     }
 }
 
-
+.filter-container {
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    margin: auto;
+}
 
 
 
@@ -179,11 +188,14 @@ a {
 form {
     min-width: 500px;
     width: 100%;
-    display: inline-block;
+    display: block;
     position: relative;
     margin: auto;
-    border: 2px solid red;
     padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -191,6 +203,18 @@ form {
     display: block;
     text-align: center;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto;
+    border: none;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4) inset;
+}
+
+#submit-btn {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0,0,0,0);
 }

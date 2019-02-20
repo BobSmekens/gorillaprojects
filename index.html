@@ -23,7 +23,8 @@
                 <div class="nav-link"><a href="">Gorilla's in training</a></div>
                 <div class="nav-link"><a href="/projects">Projects</a> </div>
                 <div class="nav-link"><a href="/register">Register</a> </div>
-                <div class="nav-link"><a href="html/signin.html">Login</a> </div>
+                <div class="nav-link"><a href="/login">Login</a> </div>
+                <div class="nav-link"><a href="/me">Me and myself</a> </div>
                 <div class="nav-hr-line"></div>
             </div>
         </div>
@@ -38,9 +39,16 @@
                 </div>
             </div>
 
+            <!-- <div class="filter-container">
+                    <select name="nameFilter" id="nameFilter">
+                        <option value="firstname">firstname</option>
+                        <option value="firstname">lastname</option>
+                        <option value="firstname">projectname</option>
+                    </select>
+            </div> -->
 
             <div class="projects-container">
-                    <div ng-view></div>
+                <div ng-view></div>
             </div>
     </div>
 </div>
@@ -56,8 +64,12 @@
 <script src="public\js\app.js"></script>
 <script src="public\js\controllers\page1controller.js"></script>
 <script src="public\js\controllers\projectsController.js"></script>
+
 <script src="public\js\services\usersAPI.js"></script>
 <script src="public/js/navbar.js"></script>
 <script src="public\js\controllers\registerController.js"></script>
+<script src="public\js\controllers\loginController.js"></script>
+<script src="public\js\controllers\meController.js"></script>
+
 </body>
 </html>
