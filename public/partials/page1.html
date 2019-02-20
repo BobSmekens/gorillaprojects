@@ -1,0 +1,6 @@
+<!-- everything in this partial make use of controller page1Controller like this:
+<div ng-controller="page1Controller"></div>  -->
+<!-- but its also possible to define that the routes section (app.js) -->
+{{users[0].yellName() + users[1].firstname + " "+ users[2].lastname}}
+
+<div ng-repeat="user in users | orderBy: 'firstname'">{{user.firstname}}</div>

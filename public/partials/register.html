@@ -1,0 +1,44 @@
+
+        <form class="" action="" method="GET">
+            <input class="signup-input" name="firstname" type="text" placeholder="first name"><br>
+            <input class="signup-input" name="lastname" type="text" placeholder="last name"><br>
+            <input class="signup-input" name="e-mail" type="text" placeholder="e-mail"><br>
+            <input class="signup-input" name="password" type="text" placeholder="password"><br>
+            <input class="signup-input" name="pwconfirm" type="text" placeholder="confirm password"><br>
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+
+
+<!-- <script>
+
+        var submitBtn = document.getElementById("submit-btn");
+        // submitBtn.addEventListener("click", submitSignup);
+        
+        var form = document.querySelector('form');
+        var data = new FormData(form);
+        var req = new XMLHttpRequest();
+        console.log(data);
+        
+        var myJSON = JSON.stringify(data);
+        console.log(myJSON);
+        function submitSignup() {
+          
+            var firstname = this.form.firstname.value;
+            var lastname = this.form.lastname.value;
+            var email = this.form.e-mail.value;
+            var password = this.form.password.value;
+            var pwconfirm = this.form.pwconfirm.value;
+        
+            var newUser = {
+                firstName: firstname,
+                lastname: lastname,
+                email: e-mail,
+                password: password
+            }
+            let resource = JSON.stringify(firstname);
+            alert('Add Button clicked: ' + newUser);
+        
+            this.service.create(resource)
+                .subscribe(response => console.log(response));
+        }
+</script> -->

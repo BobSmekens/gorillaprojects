@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gorillaprojects</title>
+    <link rel="stylesheet" href="public\libs\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <div id="nav-toggle">&#8692</div>
+
+        <div id="navbar">
+            <div id="branding">
+                <div class="branding-img"><img id="logo" src="public/img/ttlogo.png"></div>
+                <a href="/gorillaprojects">TheTroopers</a>
+                <div class="nav-hr-line"></div>
+            </div>
+            <div class="nav-links-container">
+                <div class="nav-link"><a href="">Gorilla's in training</a></div>
+                <div class="nav-link"><a href="/projects">Projects</a> </div>
+                <div class="nav-link"><a href="/register">Register</a> </div>
+                <div class="nav-link"><a href="html/signin.html">Login</a> </div>
+                <div class="nav-hr-line"></div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="banner">
+                <div class="page-header text-center">
+                    <h1>Projects by a troop of CodeGorilla's</h1>
+                    <input type="text" name="name" ng-model="name">
+                    <br><br>
+                    <div>Two-way data-binding .   {{name}}</div>
+                    <div class="alert alert-{{name}}">In all of html code</div>
+                </div>
+            </div>
+
+
+            <div class="projects-container">
+                    <div ng-view></div>
+            </div>
+    </div>
+</div>
+
+<!-- for ng-view: install ng-route "bower install angular-route --save" -->
+<!-- ng-view tells angular which container to update with a new view -->
+
+
+
+
+<script src="public\libs\angular\angular.js"></script>
+<script src="public\libs\angular-route\angular-route.js"></script>
+<script src="public\js\app.js"></script>
+<script src="public\js\controllers\page1controller.js"></script>
+<script src="public\js\controllers\projectsController.js"></script>
+<script src="public\js\services\usersAPI.js"></script>
+<script src="public/js/navbar.js"></script>
+<script src="public\js\controllers\registerController.js"></script>
+</body>
+</html>

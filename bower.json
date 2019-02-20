@@ -1,0 +1,13 @@
+{
+  "name": "projects gorrillaa",
+  "authors": [
+    "Bob Smekens <bobsmekens90@gmail.com>"
+  ],
+  "description": "codegorilla trainees projects",
+  "main": "",
+  "license": "",
+  "homepage": "",
+  "dependencies": {
+    "angular-route": "^1.7.7"
+  }
+}
