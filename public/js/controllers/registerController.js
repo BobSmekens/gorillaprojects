@@ -1,5 +1,5 @@
 myApp.controller('registerController', ['$scope', function ($scope) {
-    var urlRegister = "http://192.168.2.13:8000/register";
+    var urlRegister = baseUrl + "/register";
     $scope.getUserInfo = function () {
         var firstname = $scope.firstname;
         var lastname = $scope.lastname;

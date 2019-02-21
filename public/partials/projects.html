@@ -1,7 +1,19 @@
+<div class="filter-container">
+    <!-- <div class="filter-title">Filter projects</div> -->
+       <div class="filterBtn">
+           Sort projects: 
+            <select name="rankSelect" id="rankSelect">
+                <option value="">Ascending</option>
+                <option value="name">Descending</option>
+            </select>  
+        </div>  
+</div>
 
-<div class="project-card" ng-repeat="gorilla in gorillas">
+<div class="project-card {{gorilla.rights}} {{gorilla._id}}" ng-repeat="gorilla in gorillas">
     <img src="gorillaprojects\public\img\project1.png" alt="">
-    <div class="project-property">{{gorilla.firstName}} {{gorilla.lastName}}</div>
-    <div class="project-property">{{gorilla.email}}</div>
-    <div class="project-property">{{gorilla.specialty}}</div>
+    <div class="project-properties">
+        <div class="project-property">{{gorilla.name}}</div>
+        <div class="project-property"><a href="/users/{{gorilla.userID._id}}"><span class="me-name">{{gorilla.userID.firstName}}</span> <span class="me-name">{{gorilla.userID.lastName}}</span></a></div>
+    </div>
+    
 </div>

@@ -180,7 +180,9 @@ a {
 
 .projects-container .project-card img {
   height: 200px;
-  width: 150px;
+  min-width: 150px;
+  width: 90%;
+  margin: auto;
 }
 
 .projects-container .project-card .project-property {
@@ -194,6 +196,20 @@ a {
   padding: 15px;
   border-bottom: 1px solid #444;
   margin: auto;
+  min-width: 400px;
+}
+
+.filter-container .filter-title {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.filter-container .filterBtn {
+  display: inline-block;
+}
+
+#logout, #me {
+  display: none;
 }
 
 /*               signup/signin                */
@@ -204,8 +220,7 @@ a {
 }
 
 form {
-  min-width: 500px;
-  width: 100%;
+  width: 70%;
   display: block;
   position: relative;
   margin: auto;
@@ -233,5 +248,125 @@ form {
   -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0);
+}
+
+/*                            me page                  */
+.me-card {
+  width: 80%;
+  margin: auto;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  padding: 30px;
+  -webkit-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+}
+
+.me-card .me-left-img {
+  width: 49%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 250px;
+  vertical-align: bottom;
+  padding: 20px;
+}
+
+.me-card .me-left-img .me-img {
+  width: 100%;
+}
+
+.me-card .me-right-txt {
+  display: inline-block;
+  width: 49%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: bottom;
+  text-align: left;
+  padding: 20px;
+}
+
+.me-card .me-right-txt .me-property {
+  padding: 5px;
+}
+
+@media (max-width: 1000px) {
+  .me-card {
+    width: 80%;
+    margin: auto;
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+    padding: 30px;
+    -webkit-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+  }
+  .me-card .me-left-img {
+    width: 100%;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 20px;
+  }
+  .me-card .me-left-img .me-img {
+    width: 100%;
+  }
+  .me-card .me-right-txt {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: left;
+    padding: 20px;
+  }
+  .me-card .me-right-txt .me-name {
+    text-transform: capitalize;
+  }
+}
+
+.namebtn-option {
+  text-transform: capitalize;
+}
+
+.gorilla-card {
+  width: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 350px;
+  overflow: hidden;
+  padding: 30px;
+  margin: 20px;
+  -webkit-box-shadow: 7px 4px 55px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 4px 55px 5px rgba(0, 0, 0, 0.2);
+}
+
+.gorilla-card .gorilla-img {
+  height: 200px;
+  width: 90%;
+  margin: auto;
+}
+
+.gorilla-card .gorillas-properties {
+  text-align: left;
+}
+
+.gorilla-card .gorillas-properties .project-property {
+  font-size: 18px;
+  max-width: 100%;
+}
+
+.gorilla-properties, .project-properties {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.gorilla-name {
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=styles.css.map */

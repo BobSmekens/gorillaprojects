@@ -1,11 +1,11 @@
 myApp.controller('loginController', ['$scope', function ($scope) {
- 
+
     $scope.getLoginInfo = function () {
-       
+        var loginLink = document.getElementById("login");
         var email = $scope.email;
         var password = $scope.password;
-        
-        var urlLogin = "http://192.168.2.13:8000/login";
+
+        var urlLogin = baseUrl + "/login";
 
         let loginData = {
             email: email,
@@ -14,7 +14,7 @@ myApp.controller('loginController', ['$scope', function ($scope) {
 
         console.log(loginData);
         let login = JSON.stringify(loginData);
-        console.log("strinified: "+login);
+        console.log("strinified: " + login);
         let params = {
             headers: {
                 'Content-Type': 'application/json'
@@ -25,16 +25,22 @@ myApp.controller('loginController', ['$scope', function ($scope) {
         };
 
         fetch(urlLogin, params)
-        .then(function(response) {
-            return response.json();
-          })
-          .then(function(myJson) {
-            console.log(myJson);
-            sessionStorage.setItem('token', myJson.token);
-            console.log(sessionStorage.getItem('token'));
-          })
-		    .catch(function(error) {
-				console.log(error);
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson);
+                sessionStorage.setItem('token', myJson.token);
+                loginLink.style.display = "none";
+                logoutLink.style.display = "block";
+                meLink.style.display = "block";
+                registerLink.style.display = "none";
+
+                window.location.href = "/gorillaprojects";
+                // console.log(sessionStorage.getItem('token'));
+            })
+            .catch(function (error) {
+                console.log(error);
             })
 
     };

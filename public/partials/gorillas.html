@@ -1,0 +1,24 @@
+<div class="filter-container">
+    <div class="filterBtn">
+        Sort gorillas by name:
+        <select name="nameSelect" id="nameSelect">
+            <option value="firstname">Firstname</option>
+            <option value="lastname">Lastname</option>
+        </select>
+    </div>
+</div>
+
+<div class="gorilla-card {{gorilla.rights}} {{gorilla._id}}" ng-repeat="gorilla in gorillas">
+    <img class="gorilla-img" src="gorillaprojects\public\img\profile.png" alt="">
+    <div class="gorilla-properties">
+        <div class="project-property">
+             <a href="/users/{{gorilla._id}}">
+                <span class="gorilla-name">{{gorilla.firstName}}</span>
+                <span class="gorilla-name">{{gorilla.lastName}}</span>
+            </a>
+        </div>
+        <div class="project-property">{{gorilla.email}}</div>
+        <div class="project-property">{{gorilla.rights}}</div>
+    </div>
+
+</div>

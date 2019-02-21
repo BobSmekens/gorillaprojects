@@ -1,11 +1,6 @@
 myApp.controller('meController', ['$scope', 'users', '$routeParams', function ($scope, users, $routeParams) {
 
     // console.log(`projects controller started`);
-    // console.log(sessionStorage.getItem('token'));
-    $scope.email = "handmade email";
-    $scope.firstName = "handmade firstname";
-
-
     let params = {
         headers: {
             'Content-Type': 'application/json',
@@ -13,37 +8,27 @@ myApp.controller('meController', ['$scope', 'users', '$routeParams', function ($
         },
         method: 'GET'
     };
-    // const getMyOwnData = () => {
-       
-    fetch(urlMe, params)
+
+const getMyOwnData = () => {
+   return fetch(urlMe, params)
             .then(function (response) {
                 return response.json();
                 // console.log(response.json());
             })
             .then(function (myJson) {
-                console.log("myJson data");
+                console.log("myJson data is:");
                 console.log(myJson.data);
-                return myJson.data;
-                // console.log(myJson.data);
-                // console.log($scope.firstName);
+                $scope.userfirstname = myJson.data.firstName;
+                $scope.userlastname = myJson.data.lastName;
+                $scope.useremail = myJson.data.email;
+                $scope.userrank = myJson.data.rights;
+                $scope.$apply();
 
             })
             .catch(function (error) {
                 console.log(error)
             });
+        }
+        getMyOwnData();
 
-    // }
-
-    // console.log("userdata is:");
-    // console.log($scope.userData);
-    // const getMyData = function() {
-    //     console.log(`get my data Started`);
-    //     users.getMyData()
-    //         .then((usersOutput) => {
-    //             console.log(usersOutput.data);
-    //             $scope.user = usersOutput.data.data;
-    //             console.log(usersOutput.data.data);
-    //         });
-    // }
-    // getMyData();
 }]);

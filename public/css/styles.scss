@@ -152,7 +152,9 @@ a {
 
         img {
             height: 200px;
-            width: 150px;
+            min-width: 150px;
+            width: 90%;
+            margin: auto;
         }
 
         .project-property {
@@ -169,7 +171,23 @@ a {
     padding: 15px;
     border-bottom: 1px solid #444;
     margin: auto;
+    min-width: 400px;
+
+    .filter-title {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    .filterBtn {
+        display: inline-block;
+    }
 }
+
+#logout, #me {
+    display: none;
+}
+
+
 
 
 
@@ -186,8 +204,8 @@ a {
     margin: auto;
 }
 form {
-    min-width: 500px;
-    width: 100%;
+    // min-width: 400px;
+    width: 70%;
     display: block;
     position: relative;
     margin: auto;
@@ -217,4 +235,124 @@ form {
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4);
     box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.4);
     background-color: rgba(0,0,0,0);
+}
+
+/*                            me page                  */
+.me-card{
+    width: 80%;
+    margin:auto;
+    flex: 4;
+    padding: 30px;
+    -webkit-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+
+    .me-left-img {
+        width: 49%;
+        display: inline-block;
+        box-sizing: border-box;
+        min-height: 250px;
+        vertical-align: bottom;
+        padding: 20px;
+
+        .me-img {
+            width: 100%;
+        }
+    }
+
+    .me-right-txt {
+        display: inline-block;
+        width: 49%;
+        box-sizing: border-box;
+        vertical-align: bottom;
+        text-align: left;
+        padding: 20px;
+
+        .me-property {
+            padding: 5px;
+        }
+    }
+}
+
+
+
+@media(max-width: 1000px) {
+    .me-card{
+        width: 80%;
+        margin:auto;
+        flex: 4;
+        padding: 30px;
+        -webkit-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+    
+        .me-left-img {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: 20px;
+    
+            .me-img {
+                width: 100%;
+            }
+        }
+    
+        .me-right-txt {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: left;
+            padding: 20px;
+            
+            .me-name {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.namebtn-option{
+    text-transform: capitalize;
+}
+
+.gorilla-card {
+    width: 250px;
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 350px;
+    overflow: hidden;
+    // background-color: teal;
+    padding: 30px;
+    margin: 20px;
+    -webkit-box-shadow: 7px 4px 55px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 7px 4px 55px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 4px 55px 5px rgba(0, 0, 0, 0.2);
+
+    .gorilla-img {
+        height: 200px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .gorillas-properties{
+        text-align: left;
+    
+        .project-property {
+            font-size: 18px;
+            max-width: 100%;
+            // padding: 5px 0;
+        }
+    }
+}
+
+.gorilla-properties, .project-properties {
+    text-align: left;
+    padding-top: 10px;
+}
+
+.gorilla-name {
+    text-transform: capitalize;
 }
