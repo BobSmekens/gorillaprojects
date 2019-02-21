@@ -25,6 +25,19 @@ function toggleNav() {
     
 }
 
+if(sessionStorage.getItem('auth')){
+    handleLogin();
+} else {
+    handleLogout();
+}
+
+function handleLogin() {
+    logoutLink.style.display = "block";
+    meLink.style.display = "block";
+    loginLink.style.display = "none";
+    registerLink.style.display = "none";
+}
+
 function handleLogout() {
     logoutLink.style.display = "none";
     meLink.style.display = "none";

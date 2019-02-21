@@ -31,12 +31,13 @@ myApp.controller('loginController', ['$scope', function ($scope) {
             .then(function (myJson) {
                 console.log(myJson);
                 sessionStorage.setItem('token', myJson.token);
-                loginLink.style.display = "none";
-                logoutLink.style.display = "block";
-                meLink.style.display = "block";
-                registerLink.style.display = "none";
+                sessionStorage.setItem('auth', 'true');
+                // loginLink.style.display = "none";
+                // logoutLink.style.display = "block";
+                // meLink.style.display = "block";
+                // registerLink.style.display = "none";
 
-                window.location.href = "/gorillaprojects";
+                 window.location.href = "/";
                 // console.log(sessionStorage.getItem('token'));
             })
             .catch(function (error) {

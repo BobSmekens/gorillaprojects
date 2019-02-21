@@ -4,33 +4,33 @@ var myApp = angular.module('myApp', [
 ]).
 config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 	$routeProvider.when('/page1', {
-		templateUrl: 'gorillaprojects/public/partials/page1.html',
+		templateUrl: 'public/partials/page1.html',
 		controller: 'page1Controller'
 	});
 	$routeProvider.when('/projects', {
-		templateUrl: 'gorillaprojects/public/partials/projects.html',
+		templateUrl: 'public/partials/projects.html',
 		controller: 'projectsController'
 	});
 	$routeProvider.when('/register', {
-		templateUrl: 'gorillaprojects/public/partials/register.html',
+		templateUrl: 'public/partials/register.html',
 		controller: 'registerController'
 	});
 	$routeProvider.when('/login', {
-		templateUrl: 'gorillaprojects/public/partials/login.html',
+		templateUrl: 'public/partials/login.html',
 		controller: 'loginController'
 	});
 	$routeProvider.when('/me', {
-		templateUrl: 'gorillaprojects/public/partials/me.html',
+		templateUrl: 'public/partials/me.html',
 		controller: 'meController'
 	});
-	$routeProvider.when('/user/:id', {templateUrl: 'gorillaprojects/public/partials/singleUser.html', controller: 'userController'});
+	$routeProvider.when('/user/:id', {templateUrl: 'public/partials/singleUser.html', controller: 'userController'});
 	$routeProvider.when('/gorillas', {
-		templateUrl: 'gorillaprojects/public/partials/gorillas.html',
+		templateUrl: 'public/partials/gorillas.html',
 		controller: 'gorillasController'
 	});
 
 
-	$routeProvider.otherwise({redirectTo: '/gorillaprojects'});
+	$routeProvider.otherwise({redirectTo: '/'});
 
 	$locationProvider.html5Mode({
 		enabled: true,
