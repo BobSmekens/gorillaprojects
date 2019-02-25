@@ -2,6 +2,7 @@ const baseUrl = "http://192.168.2.53:8000";
 
 var UrlAPIUsers = baseUrl + "/users";
 var urlMe = baseUrl + "/me";
+
 let params = {
 	headers: {
 		'Content-Type': 'application/json',

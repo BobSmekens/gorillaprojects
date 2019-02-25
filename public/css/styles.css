@@ -33,15 +33,32 @@ a {
   position: relative;
 }
 
+.main-title {
+  padding-top: 100px;
+  display: block;
+  width: 80%;
+}
+
 #nav-toggle {
   position: absolute;
   top: 20px;
   left: 20px;
   font-size: 32px;
+  min-height: 30px;
+  min-width: 30px;
+  display: block;
   z-index: 5;
   -webkit-transition: 1s;
   transition: 1s;
   color: gold;
+  background-image: url("../img/banana.png");
+  background-size: cover;
+}
+
+#nav-toggle #img {
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 
 /*          navbar               */
@@ -122,12 +139,6 @@ a {
   color: #1a1a1a;
   font-size: 18px;
   min-height: 250px;
-}
-
-.banner h3 {
-  padding: 30px;
-  font-size: 32px;
-  font-weight: bold;
 }
 
 .content-container {
@@ -328,6 +339,12 @@ form {
   text-transform: capitalize;
 }
 
+.me-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: italic;
+}
+
 .gorilla-card {
   width: 250px;
   -webkit-box-flex: 1;
@@ -367,6 +384,59 @@ form {
 }
 
 .gorilla-name {
+  text-transform: capitalize;
+}
+
+.addproject-form .addproject-title {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.addproject-form label {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+}
+
+.addproject-form input {
+  display: inline-block;
+  margin: 5px;
+}
+
+.project-card {
+  width: 80%;
+  margin: auto;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  padding: 30px;
+  -webkit-box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 4px 75px 5px rgba(0, 0, 0, 0.4);
+}
+
+.project-card .project-left-img {
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+
+.project-card .project-left-img .project-img {
+  width: 100%;
+}
+
+.project-card .project-right-txt {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  padding: 20px;
+}
+
+.project-card .project-right-txt .project-name {
   text-transform: capitalize;
 }
 /*# sourceMappingURL=styles.css.map */

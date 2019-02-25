@@ -26,7 +26,7 @@ getUsers();
         var rankBtn = document.getElementById("rankSelect");
         var sort = rankBtn.value;
         // var name = "";
-        var sortNamesUrl = baseUrl + "/projects?embed=user&sort="+sort;
+        var sortNamesUrl = baseUrl + "/projects?embed=users&sort="+sort;
 
         const getRank = function() {
             console.log(`getUsers Started`);

@@ -1,18 +1,16 @@
-myApp.controller('userController', ['$scope', 'users', '$routeParams', function ($scope, users, $routeParams) {
-    // $scope.firstName = 'placehlder';
-    console.log(`single user controller started`);
-    // console.log(sessionStorage.getItem('token'));
+myApp.controller('singlegorillaController', ['$scope', 'users', '$routeParams', function ($scope, users, $routeParams) {
+var singlegorillaUrl = baseUrl + "/users/" +$routeParams.id;
+    // console.log(`projects controller started`);
     let params = {
         headers: {
             'Content-Type': 'application/json',
+
         },
         method: 'GET'
     };
 
-var urlUser = baseUrl + "/users/"+ $routeParams.id + "/projects"
-
-const getUserData = () => {
-   return fetch(urlUser, params)
+const getMyOwnData = () => {
+   return fetch(singlegorillaUrl, params)
             .then(function (response) {
                 return response.json();
                 // console.log(response.json());
@@ -20,17 +18,19 @@ const getUserData = () => {
             .then(function (myJson) {
                 console.log("myJson data is:");
                 console.log(myJson.data);
-                // $scope.userfirstname = myJson.data.firstName;
-                // $scope.userlastname = myJson.data.lastName;
-                // $scope.useremail = myJson.data.email;
-                // $scope.userrank = myJson.data.rights;
-                // $scope.$apply();
+                $scope.userfirstname = myJson.data.firstName;
+                $scope.userlastname = myJson.data.lastName;
+                $scope.useremail = myJson.data.email;
+                $scope.userrank = myJson.data.rights;
+                $scope.userspecialty = myJson.data.specialty;
+                $scope.userhobbies = myJson.data.hobbies;
+                $scope.$apply();
 
             })
             .catch(function (error) {
                 console.log(error)
             });
         }
-        getUserData();
+        getMyOwnData();
 
 }]);

@@ -1,0 +1,19 @@
+<form id="signup-form" class="addproject-form" ng-submit="getProject()">
+    <div class="addproject-title">Add Project.</div>
+    <label for="projectname">Name project: </label>
+    <input class="signup-input" name="projectname" type="text" placeholder="Name" ng-model="name"><br>
+    
+    <label for="github">Github: </label>
+    <input class="signup-input" name="github" type="text" placeholder="Link" ng-model="github"><br>
+    
+    <label for="website">Website: </label>
+    <input class="signup-input" name="website" type="text" placeholder="Link" ng-model="site"><br>
+    
+    <label for="languages">Program languages: </label>
+    <input class="signup-input" name="languages" type="text" placeholder="(Seperate by ',')" ng-model="language"><br>
+    
+    <label for="time">Time spended: </label>
+    <input class="signup-input" name="time" type="text" placeholder="(1 day, 1 week, etc.)" ng-model="time"><br>
+    
+    <button id="submit-btn" type="submit">Submit</button>
+</form>

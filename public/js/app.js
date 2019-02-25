@@ -23,14 +23,27 @@ config(['$routeProvider', '$locationProvider', function ($routeProvider, $locati
 		templateUrl: 'public/partials/me.html',
 		controller: 'meController'
 	});
-	$routeProvider.when('/user/:id', {templateUrl: 'public/partials/singleUser.html', controller: 'userController'});
+	$routeProvider.when(`/users/:id`, {
+		templateUrl: '/public/partials/singlegorilla.html',
+		controller: 'singlegorillaController'
+	});
 	$routeProvider.when('/gorillas', {
 		templateUrl: 'public/partials/gorillas.html',
 		controller: 'gorillasController'
 	});
+	$routeProvider.when('/addproject', {
+		templateUrl: 'public/partials/addproject.html',
+		controller: 'addprojectController'
+	});
+	$routeProvider.when('/projects/:projectId', {
+		templateUrl: '/public/partials/singleproject.html',
+		controller: 'singleprojectController'
+	});
 
 
-	$routeProvider.otherwise({redirectTo: '/'});
+	// $routeProvider.otherwise({
+	// 	redirectTo: '/'
+	// });
 
 	$locationProvider.html5Mode({
 		enabled: true,

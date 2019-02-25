@@ -11,7 +11,7 @@
 <body>
 
     <div class="content-wrapper">
-        <div id="nav-toggle">&#8692</div>
+        <div id="nav-toggle"><img id="banana" src="public/img/banana.png" style="width: 50px"></div>
 
         <div id="navbar">
             <div id="branding">
@@ -26,17 +26,18 @@
                 <div class="nav-link" id="login"><a href="/login">Login</a> </div>
                 <div class="nav-link" id="logout"><a href="/login">Logout</a> </div>
                 <div class="nav-link" id="me"><a href="/me">Me and myself</a> </div>
+                <div class="nav-link" id="addproject"><a href="/addproject">Add project</a> </div>
+
                 <div class="nav-hr-line"></div>
             </div>
         </div>
         <div class="content-container">
             <div class="banner">
-                <div class="page-header text-center">
-                    <h1>Projects by gorilla's for gorilla's</h1>
-                    <input type="text" name="name" ng-model="name">
-                    <br><br>
-                    <div>Two-way data-binding .   {{name}}</div>
-                    <div class="alert alert-{{name}}">In all of html code</div>
+                <div class="main-title">
+                    <h1>CodeGorilla projects</h1>
+                    <div>Projects made by ambitious, starting web-developers during the CodeGorilla bootcamp. <br>
+                    Feel free to take a look around
+                    </div>
                 </div>
             </div>
 <!-- for ng-view: install ng-route "bower install angular-route --save" -->
@@ -64,6 +65,8 @@
 <script src="public\js\controllers\meController.js"></script>
 <script src="public\js\controllers\singleUserController.js"></script>
 <script src="public\js\controllers\gorillasController.js"></script>
+<script src="public\js\controllers\addprojectController.js"></script>
+<script src="public\js\controllers\singleprojectController.js"></script>
 
 </body>
 </html>

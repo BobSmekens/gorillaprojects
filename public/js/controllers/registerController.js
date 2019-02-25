@@ -38,6 +38,7 @@ myApp.controller('registerController', ['$scope', function ($scope) {
           })
           .then(function(myJson) {
             console.log(JSON.stringify(myJson));
+            window.location.href = "/";
           })
 		    .catch(function(error) {
 				console.log(error);

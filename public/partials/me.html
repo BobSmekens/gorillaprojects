@@ -6,6 +6,26 @@
                 <div class="me-property"><span class="me-name">{{userfirstname}} </span><span class="me-name">{{userlastname}}</span></div>
                 <div class="me-property">{{useremail}}</div>
                 <div class="me-property">Rank: {{userrank}}</div>
-        </div>     
+                <div class="me-property">Specializes in: {{userspecialty}}</div>
+                <div class="me-property">Also likes: {{userhobbies}}</div>
+        </div>
 </div>
 
+<div class="">
+        <div class="project-card {{gorilla.rights}} {{gorilla._id}}" ng-repeat="gorilla in gorillas">
+                <div style="text-align: center">
+                        <a href="/projects/{{gorilla._id}}"><img class="project-image" src="\public\img\project1.png"
+                                        alt=""></a>
+                </div>
+                <div class="project-properties">
+                        <div class="project-property me-name">{{gorilla.name}}</div>
+                        <div class="project-property">
+                                <a href="/users/{{gorilla.userID._id}}">
+                                        <span class="gorilla-name">{{gorilla.userID.firstName}}</span>
+                                        <span class="gorilla-name">{{gorilla.userID.lastName}}</span>
+                                </a>
+                        </div>
+                </div>
+        </div>
+        me projects come here, tarzan, you monkey
+</div>

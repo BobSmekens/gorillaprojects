@@ -6,6 +6,8 @@ var logoutLink = document.getElementById("logout");
 var loginLink = document.getElementById("login");
 var meLink = document.getElementById("me");
 var registerLink = document.getElementById("register");
+var addProject = document.getElementById("addproject");
+
 
 navToggleBtn.addEventListener("click", toggleNav);
 logoutLink.addEventListener("click", handleLogout);
@@ -34,8 +36,10 @@ if(sessionStorage.getItem('auth')){
 function handleLogin() {
     logoutLink.style.display = "block";
     meLink.style.display = "block";
+    addProject.style.display = "block";
     loginLink.style.display = "none";
     registerLink.style.display = "none";
+
 }
 
 function handleLogout() {
@@ -43,5 +47,6 @@ function handleLogout() {
     meLink.style.display = "none";
     loginLink.style.display = "block";
     registerLink.style.display = "block";
+    addProject.style.display = "none";
     sessionStorage.clear();
 }
